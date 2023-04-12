@@ -11,6 +11,13 @@ async function createConfig() {
   const mdxMermaid = await import('mdx-mermaid')
 
   return {
+    staticDirectories: ['static'],
+    scripts: [
+      {
+        src: '/scripts/init.js',
+        async: true,
+      },
+    ],
     title: 'Snowplow Documentation',
     tagline:
       'Build, deploy, and scale your next data creation project using Snowplow.',
